@@ -1,0 +1,83 @@
+rubynote 
+
+ sudo apt-get install ruby-full 
+
+  ruby -v
+ruby 2.7.1p83 (2020-03-31 revision a0c7c23c9c) [x86_64-linux-gnu]
+evan@myxps:~/lx/ssh/intra$ 
+
+
+交互式 Ruby（IRb）
+
+交互式 Ruby（IRb）为体验提供了一个 shell。在 IRb shell 内，您可以逐行立即查看解释结果。
+
+这个工具会随着 Ruby 的安装自动带有，所以您不需要做其他额外的事情，IRb 即可正常工作。
+
+只需要在命令提示符中键入 irb，一个交互式 Ruby Session 将会开始，
+
+
+intra$ irb
+irb(main):001:0> puts "hey evan"
+hey evan
+=> nil
+
+
+* base 20分钟学会Ruby 
+
+evan@myxps:~$ irb
+irb(main):001:0>  3+2
+=> 5
+irb(main):002:0> 3*4
+=> 12
+irb(main):003:0> 3**2
+=> 9
+irb(main):004:0> Math.sqrt(9)
+=> 3.0
+
+
+方法 function 
+
+rb(main):005:0> def h 
+irb(main):006:1*   puts "hey ruby"
+irb(main):007:0> end
+=> :h
+irb(main):008:0> h
+hey ruby
+=> nil
+
+
+irb(main):009:1* def h(name)
+irb(main):010:1*   puts "hello #{name}"
+irb(main):011:0> end
+=> :h
+
+irb(main):012:0> h("eva")
+hello eva
+=> nil
+
+irb(main):014:1* def h(name="world")
+irb(main):015:1*   puts "hello #{name.capitalize}!"
+irb(main):016:0> end 
+=> :h
+
+如果不输入参数，那么就会使用默认参数world。
+irb(main):017:0> h "evan"
+hello Evan!
+=> nil
+irb(main):018:0> h
+hello World!
+=> nil
+
+
+
+
+
+
+* see also 
+https://www.runoob.com/ruby/ruby-installation-unix.html
+
+https://www.cnblogs.com/xuliangxing/p/7132656.html
+
+https://linuxize.com/post/how-to-install-ruby-on-debian-9/
+
+https://flicsdb.com/how-to-install-ruby-on-rails-on-ubuntu-or-kali-linux/
